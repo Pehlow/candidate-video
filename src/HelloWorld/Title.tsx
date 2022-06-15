@@ -1,4 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import "../font.css";
 
 export const Title: React.FC<{
 	titleText: string;
@@ -10,9 +11,10 @@ export const Title: React.FC<{
 	return (
 		<h1
 			style={{
-				fontFamily: 'SF Pro Text, Helvetica, Arial',
+				color: 'white',
+				fontSize: 90,
 				fontWeight: 'bold',
-				fontSize: 100,
+				fontFamily: 'Lato, sans-serif',
 				textAlign: 'center',
 				position: 'absolute',
 				bottom: 160,
