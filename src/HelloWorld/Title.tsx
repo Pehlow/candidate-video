@@ -1,5 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import "../font.css";
+import '../font.css';
 
 export const Title: React.FC<{
 	titleText: string;
@@ -21,30 +21,26 @@ export const Title: React.FC<{
 				width: '100%',
 			}}
 		>
-			{text.map((t, i) => {
-				return (
-					<span
-						key={t}
-						style={{
-							color: titleColor,
-							marginLeft: 10,
-							marginRight: 10,
-							transform: `scale(${spring({
-								fps: videoConfig.fps,
-								frame: frame - i * 5,
-								config: {
-									damping: 100,
-									stiffness: 200,
-									mass: 0.5,
-								},
-							})})`,
-							display: 'inline-block',
-						}}
-					>
-						{t}
-					</span>
-				);
-			})}
+			<span
+				style={{
+					color: titleColor,
+					marginLeft: 10,
+					marginRight: 10,
+					transform: `scale(${spring({
+						fps: videoConfig.fps,
+						frame: frame - 5,
+						config: {
+							damping: 10,
+							stiffness: 160,
+							mass: 0.6,
+							overshootClamping:true
+						},
+					})})`,
+					display: 'inline-block',
+				}}
+			>
+				{titleText}
+			</span>
 		</h1>
 	);
 };

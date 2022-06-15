@@ -12,6 +12,32 @@ export const Logo: React.FC<{
 				position: 'absolute',
 				width: 500,
 				height: 500,
+        filter: `blur(${spring({
+          from:10,
+          to:0,
+          fps: videoConfig.fps,
+          frame: frame - 15,
+          config: {
+            damping: 10,
+            stiffness: 160,
+            mass: 0.6,
+            overshootClamping:true
+          },
+        })}px)`,
+        transform: `scale(${spring({
+          from:0.2,
+          to:1,
+          fps: videoConfig.fps,
+          frame: frame - 5,
+          config: {
+            damping: 10,
+            stiffness: 160,
+            mass: 0.6,
+            overshootClamping:true
+          },
+        })})`,
+        top: videoConfig.height / 2 - 250,
+        left: videoConfig.width / 2 - 250,
 			}}
 		>
 			<svg viewBox="0 0 80 80">
