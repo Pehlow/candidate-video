@@ -1,5 +1,5 @@
 import {interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Logo} from './HelloWorld/Logo';
+import {Logo} from './Candidate/BedrockLogo';
 import {Title} from './HelloWorld/Title';
 
 export const HelloWorld: React.FC<{

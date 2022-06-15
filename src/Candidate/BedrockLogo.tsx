@@ -10,8 +10,8 @@ export const Logo: React.FC<{
 		<div
 			style={{
 				position: 'absolute',
-				width: videoConfig.width,
-				height: videoConfig.height,
+				width: 500,
+				height: 500,
 			}}
 		>
 			<svg viewBox="0 0 80 80">
