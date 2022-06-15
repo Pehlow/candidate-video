@@ -16,7 +16,7 @@ export const RemotionVideo: React.FC = () => {
 				height={1080}
 				defaultProps={{
           titleText: 'Hello World',
-          titleColor: '#ff0000',
+          titleColor: 'white',
 				}}
 			/>
 		</>
